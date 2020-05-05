@@ -1,0 +1,14 @@
+<template name="meetups">
+  <div class="template-meetups">
+    <div class="page-header">
+      <h1>Meetups</h1>
+    </div>
+
+    <ul class="list-group">
+      {{#each meetups}}
+        <li class="list-group-item">{{ title}} <span class="label label-default">{{city}}, {{state}}</span></li>
+      {{/each}}
+    </ul>
+
+  </div>
+</template>
