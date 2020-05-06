@@ -40,3 +40,4 @@ standard-minifier-js
 shell-server
 dynamic-import
 underscore
+tsega:bootstrap3-datetimepicker
