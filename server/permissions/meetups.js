@@ -1,4 +1,4 @@
-Items.allow({
+Meetups.allow({
   'insert': function() {
     return true;
   },

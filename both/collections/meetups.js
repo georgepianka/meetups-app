@@ -1,4 +1,4 @@
-Meetups = new Mongo.Collection('Meetups');
+Meetups = new Mongo.Collection('meetups');
 
 Meetups.helpers({
 

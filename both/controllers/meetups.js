@@ -3,10 +3,10 @@ MeetupsController = AppController.extend({
     return this.subscribe('meetups');
   },
   data: {
-    items: Items.find({})
+    meetups: Meetups.find({})
   },
   onAfterAction: function () {
-    Meta.setTitle('Dashboard');
+    Meta.setTitle('Meetups');
   }
 });
 
