@@ -12,31 +12,70 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="modal{{_id}}Label">{{title}}</h5>
+                <h5 class="modal-title" id="modal{{_id}}Label">Edit Meetup
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
+                </h5>
               </div>
               <div class="modal-body">
-                <ul class="list-group">
-                  <li class="list-group-item"> Date & Time: {{meetupDate}}</li>
-                  <li class="list-group-item"> Address: {{address}} | {{city}}, {{state}}, {{zipcode}}</li>
-                  <li class="list-group-item"> Topics: {{topics}}</li>
-                  <li class="list-group-item"> Meetup Type: {{type}}</li>
-                  <li class="list-group-item"> Contact Email: {{email}}</li>
-                </ul>
-                <p class="well"> Posted By: {{username}}</p>
+                <form class="add-meetup-form">
+                  <div class= "form-group">
+                    <label>Meetup Name</label>
+                    <input type="text" class="form-control" id="title" value={{title}} name="title" placeholder="Name of Meetup">
+                  </div>
+                  <div class="form-group">
+                    <label>Contact Email</label>
+                    <input type="email" class="form-control" id="email" value={{email}} name="email" placeholder="Contact/Email">
+                  </div>
+                  <div class="form-group">
+                    <label>Topics</label>
+                    <input type="text" class="form-control" id="topics" value={{topics}} name="topics" placeholder="Topics (eg. Nature, Fitness, Programming, Dining...)">
+                  </div>
+                  <div class="form-group">
+                    <label> Type </label>
+                    <select id="type" value={{type}} name="type" class="form-control">
+                      <option value="public">Public</option>
+                      <option value="private">Private</option>
+                      <option value="invite">Invite</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Meetup Date</label>
+                    <div class="input-group datetimepicker">
+                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                      <input class="set-due-date form-control" id="meetup_date" value={{meetupDate}} name="meetupdate" type="text" />
+                    </div>
+                  </div>
+                  <div class= "form-group">
+                    <label>Address</label>
+                    <input type="text" class="form-control" id="address" value={{address}} name="address" placeholder="Street Address">
+                  </div>
+                  <div class= "form-group">
+                    <label>City</label>
+                    <input type="text" class="form-control" id="city" value={{city}} name="city" placeholder="City">
+                  </div>
+                  <div class= "form-group">
+                    <label>State</label>
+                    <input type="text" class="form-control" id="state" value={{state}} name="state" placeholder="State">
+                  </div>
+                  <div class= "form-group">
+                    <label>Zip</label>
+                    <input type="text" class="form-control" id="zipcode" value={{zipcode}} name="zipcode" placeholder="Zip Code">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Update Meetup</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </form>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
                 <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-              </div>
             </div>
           </div>
         </div>
 
         {{else}}
-        <p>There are no meetups to show you...</p>
+        <p>You haven't posted any meetups yet..</p>
       {{/each}}
     </ul>
 
