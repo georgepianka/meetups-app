@@ -21,7 +21,7 @@ MeetupsController.events({
     let city = event.target.city.value;
     let state = event.target.state.value;
     let zipcode = event.target.zipcode.value;
-    let meetupDate = event.target.meetupdate.value;
+    let meetupDate = event.target.meetup_date.value;
 
     let params = {
       title: title,
@@ -41,5 +41,7 @@ MeetupsController.events({
     Meteor.call('addMeetup', params);
 
     toastr.success('Meetup Posted!');
+
+    Router.go('/meetups');
   }
 });
