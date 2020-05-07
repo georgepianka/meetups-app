@@ -37,17 +37,15 @@ MyMeetupsController.events({
       city: city,
       state: state,
       zipcode: zipcode,
-      user: Meteor.userId(),
-      username: Meteor.user().username,
       meetupDate: meetupDate,
-      createdAt: new Date()
+      updatedAt: new Date()
     }
 
     //insert
-    Meteor.call('addMeetup', params);
+    Meteor.call('updateMeetup', id, params);
 
-    toastr.success('Meetup Posted!');
+    toastr.success("Success! Meetup Updated.");
 
-    Router.go('/meetups');
+    Router.go('/myMeetups');
   }
 });
