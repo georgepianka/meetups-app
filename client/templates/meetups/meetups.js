@@ -1,0 +1,3 @@
+Template.meetups.onRendered(function(){
+
+});
