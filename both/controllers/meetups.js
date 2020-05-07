@@ -32,7 +32,8 @@ MeetupsController.events({
       city: city,
       state: state,
       zipcode: zipcode,
-      user: Meteor.user().username,
+      user: Meteor.userId(),
+      username: Meteor.user().username,
       meetupDate: meetupDate,
       createdAt: new Date()
     }

@@ -5,7 +5,7 @@
     </div>
 
     <ul class="list-group">
-      {{#each meetups}}
+      {{#each myMeetups}}
         <li class="list-group-item"><button type="button" class="btn btn-lg btn-secondary" data-toggle="modal" data-target="#modal{{_id}}">{{title}} </button><span class="label label-default">{{city}}, {{state}}</span></li>
         <!-- Bootstrap Modal -->
         <div class="modal fade" id="modal{{_id}}" tabindex="-1" role="dialog" aria-labelledby="modal{{_id}}Label" aria-hidden="true">
@@ -25,7 +25,7 @@
                   <li class="list-group-item"> Meetup Type: {{type}}</li>
                   <li class="list-group-item"> Contact Email: {{email}}</li>
                 </ul>
-                <p class="well"> Posted By: {{user}}</p>
+                <p class="well"> Posted By: {{username}}</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

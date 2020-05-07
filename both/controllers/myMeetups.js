@@ -2,11 +2,15 @@ MyMeetupsController = AppController.extend({
   waitOn: function() {
     return this.subscribe('myMeetups');
   },
-  data: {
-    items: Items.find({})
-  },
+
   onAfterAction: function () {
     Meta.setTitle('My Meetups');
+  }
+});
+
+MyMeetupsController.helpers({
+  'myMeetups': function() {
+    return Meetups.find({user: Meteor.userId()})
   }
 });
 
