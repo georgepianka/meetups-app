@@ -41,3 +41,4 @@ shell-server
 dynamic-import
 underscore
 tsega:bootstrap3-datetimepicker
+chrismbeckett:toastr

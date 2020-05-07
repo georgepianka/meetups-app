@@ -11,17 +11,17 @@ MeetupsController = AppController.extend({
 });
 
 MeetupsController.events({
-  'submit .add-meetup-form': function (event) {
+  'submit .add-meetup-form': function(event) {
     event.preventDefault();
     let title = event.target.title.value;
     let email = event.target.email.value;
     let topics = event.target.topics.value;
     let type = event.target.type.value;
-    let address = event.target.saddres.value;
+    let address = event.target.address.value;
     let city = event.target.city.value;
     let state = event.target.state.value;
     let zipcode = event.target.zipcode.value;
-    let meetupDate = event.target['meetup-date'].value;
+    let meetupDate = event.target.meetupdate.value;
 
     let params = {
       title: title,
