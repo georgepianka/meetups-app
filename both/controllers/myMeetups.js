@@ -39,7 +39,7 @@ MyMeetupsController.events({
       zipcode: zipcode,
       meetupDate: meetupDate,
       updatedAt: new Date()
-    },
+    }
 
     //insert
     Meteor.call('updateMeetup', id, params);
@@ -56,4 +56,5 @@ MyMeetupsController.events({
       toastr.success("Success! Meetup Deleted.")
     }
   }
+  
 });

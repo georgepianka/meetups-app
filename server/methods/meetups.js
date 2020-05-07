@@ -7,5 +7,8 @@ Meteor.methods({
        {_id: id},
        {$set:params}
      )
+  },
+  'removeMeetup': (id) => {
+    Meetups.remove(id)
   }
 });
