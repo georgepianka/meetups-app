@@ -39,7 +39,7 @@ MyMeetupsController.events({
       zipcode: zipcode,
       meetupDate: meetupDate,
       updatedAt: new Date()
-    }
+    },
 
     //insert
     Meteor.call('updateMeetup', id, params);
@@ -47,5 +47,13 @@ MyMeetupsController.events({
     toastr.success("Success! Meetup Updated.");
 
     Router.go('/myMeetups');
+  },
+
+  'click .remove-meetup': (event) => {
+    event.preventDefault();
+    if (confirm("Are you sure you want to delete this meetup?")) {
+      Meteor.call("removeMeetup", event.currentTarget.id);
+      toastr.success("Success! Meetup Deleted.")
+    }
   }
 });

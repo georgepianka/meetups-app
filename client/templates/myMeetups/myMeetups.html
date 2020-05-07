@@ -7,6 +7,9 @@
     <ul class="list-group">
       {{#each myMeetups}}
         <li class="list-group-item"><button type="button" class="btn btn-lg btn-secondary" data-toggle="modal" data-target="#modal{{_id}}">{{title}} </button><span class="label label-default">{{city}}, {{state}}</span>
+
+          <!-- id to pass to delete event -->
+          <!-- class remove-meetup to target click event -->
           <a id="{{_id}}" class="pull-right remove-meetup text-danger"><i class="fa fa-remove"></i></a>
         </li>
         <!-- Bootstrap Modal -->
