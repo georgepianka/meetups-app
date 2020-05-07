@@ -1,6 +1,6 @@
 MyMeetupsController = AppController.extend({
   waitOn: function() {
-    return this.subscribe('items');
+    return this.subscribe('myMeetups');
   },
   data: {
     items: Items.find({})
