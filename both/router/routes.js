@@ -2,9 +2,9 @@ Router.route('/', {
   name: 'home'
 });
 
-Router.route('/dashboard', {
-  name: 'dashboard',
-  controller: 'DashboardController'
+Router.route('/myMeetups', {
+  name: 'myMeetups',
+  controller: 'MyMeetupsController'
 });
 
 Router.route('/meetups', {
@@ -18,5 +18,5 @@ Router.route('/meetups/add', {
 })
 
 Router.plugin('ensureSignedIn', {
-  only: ['dashboard', 'addMeetup']
+  only: ['myMeetups', 'addMeetup']
 });

@@ -1,0 +1,44 @@
+<template name="myMeetups">
+  <div class="template-dashboard">
+    <div class="page-header">
+      <h1>Meetups</h1>
+    </div>
+
+    <ul class="list-group">
+      {{#each meetups}}
+        <li class="list-group-item"><button type="button" class="btn btn-lg btn-secondary" data-toggle="modal" data-target="#modal{{_id}}">{{title}} </button><span class="label label-default">{{city}}, {{state}}</span></li>
+        <!-- Bootstrap Modal -->
+        <div class="modal fade" id="modal{{_id}}" tabindex="-1" role="dialog" aria-labelledby="modal{{_id}}Label" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal{{_id}}Label">{{title}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <ul class="list-group">
+                  <li class="list-group-item"> Date & Time: {{meetupDate}}</li>
+                  <li class="list-group-item"> Address: {{address}} | {{city}}, {{state}}, {{zipcode}}</li>
+                  <li class="list-group-item"> Topics: {{topics}}</li>
+                  <li class="list-group-item"> Meetup Type: {{type}}</li>
+                  <li class="list-group-item"> Contact Email: {{email}}</li>
+                </ul>
+                <p class="well"> Posted By: {{user}}</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{else}}
+        <p>There are no meetups to show you...</p>
+      {{/each}}
+    </ul>
+
+  </div>
+</template>

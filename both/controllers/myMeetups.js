@@ -1,4 +1,4 @@
-DashboardController = AppController.extend({
+MyMeetupsController = AppController.extend({
   waitOn: function() {
     return this.subscribe('items');
   },
@@ -6,11 +6,11 @@ DashboardController = AppController.extend({
     items: Items.find({})
   },
   onAfterAction: function () {
-    Meta.setTitle('Dashboard');
+    Meta.setTitle('My Meetups');
   }
 });
 
-DashboardController.events({
+MyMeetupsController.events({
   'click [data-action=doSomething]': function (event, template) {
     event.preventDefault();
   }
