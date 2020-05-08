@@ -36,7 +36,6 @@ ejson
 spacebars
 check
 
-standard-minifier-js
 shell-server
 dynamic-import
 underscore
