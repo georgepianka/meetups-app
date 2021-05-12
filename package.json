@@ -19,7 +19,7 @@
   "dependencies": {
     "@babel/runtime": "^7.9.2",
     "bcrypt": "^4.0.1",
-    "simpl-schema": "^1.6.2"
+    "simpl-schema": "^1.10.2"
   },
   "devDependencies": {
     "install-peers": "^1.0.3"
